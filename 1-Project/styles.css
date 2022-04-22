@@ -1,0 +1,101 @@
+/**
+*transform: translate(), scale(), rotate(), skew()
+*transform -> moves elements in vertical or horizontal directions
+*transform: translate(); -> syntax
+*-translate(tx, ty);
+*-translate(tx);
+*-translateX(tx);
+*-translateY(ty);
+*tx -> the length of the translation to x axis = length or percentage values
+*ty -> the length of the translation to y axis = length or percentage values
+*
+*
+*scale -> resize elements in 2d space
+*transform: scale(); -> syntax
+*-scale(sx, sy);
+*-scale(sx);
+*-scaleX(sx);
+*-scaleY(sy);
+*sx -> the amount of resize of the element in horizontal direction - numbers(int, zero, decimals)
+*sy -> the amount of resize of the element in vertical direction - numbers(int, zero, decimals)
+*sx, sy = [0, 1] -> decreasing the size
+*sx, sy > 1 -> increasing the size
+*
+*
+*rotate -> rotates elements in 2d space
+*transform: rotate(a);
+*a = angle
+*-> positive = clockwise rotation
+*-> negative = counter-clockwise rotation
+*a = 360 degrees = 1 full rotation -> deg
+*a = 400 gradians = 1 full rotation -> grad
+*a = 2 * pi radians = 1 full rotation = 2 * 3.14 = 6.28 radians = 1 full rotation
+*a = 1 turn = 1 full rotations -> 1turn
+*
+*
+*skew -> tilting elements in 2d space
+*transform.skew(); -> syntax
+*skew(ax, ay);
+*skew(ax);
+*skew(ay);
+*skewX(ax);
+*skewY(ay);
+*ax -> the amount of the angle to use to distort the element in horizontal direction
+*ay -> the amount of the angle to use to distort the element in vertical direction
+*ax, ay -> degree, gradian, radian and turn
+*
+*
+*elements -> block level and inline level
+*transformable -> block levels
+*non-transformable -> inline levels
+**/
+
+.wrapper{
+    width: 300px;
+    height: 300px;
+    border: 1px dashed red;
+    margin: 0 auto;
+}
+   
+.inner{
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
+    margin: 0 auto;
+
+    /*Translate Element in X Axis*/
+    /* transform: translate(-50px); */
+    transform: translateX(100px);
+    /*Translate Element in Y Axis*/
+    /* transform: translate(0, 50px); */
+    transform: translateY(100px);
+    /*Translate Element in Both Axis*/
+    /* transform: translate(100px, 100px); */
+
+    /*Scaling along both axis*/
+    /* transform: scale(2, 2);//increase the size of the box twice in both directions x and y */
+    /* transform: scale(2);//above and this are the same */
+    /*Scaling along X axis*/
+    /* transform: scaleX(2); */
+    /*Scaling along Y axis*/
+    transform: scaleY(0.5);
+
+    /*Degrees*/
+    /* transform: rotate(30deg); */
+    /* transform: rotate(-5deg); */
+    /*Gradians*/
+    /* transform: rotate(10grad); */
+    /*Radians*/
+    /* (360deg / 6.28) * 1grad = 57deg */
+    /* transform: rotate(1grad); */
+    /*Turns*/
+    transform: rotate(0.3turn);
+
+    /*Skew in X Axis*/
+    /* transform: skew(10deg); */
+    /* transform: skewX(-20deg); */
+    /*Skew in Y Axis*/
+    /* transform: skewY(-20deg); */
+    /*Skew in Both Axis*/
+    transform: skewY(10deg, 20deg);
+}
