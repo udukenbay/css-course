@@ -99,3 +99,6 @@
     /*Skew in Both Axis*/
     transform: skewY(10deg, 20deg);
 }
+
+/* inline elements are non-transformable */
+/* block elements transformable */
