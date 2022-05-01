@@ -1,0 +1,25 @@
+/**
+ * transition-property: property name
+ * transition-duration: duration amount in time (seconds or milliseconds)
+ * transition-timing-function: predefined keyword or steps function or timing function
+ * transition-delay: timeout amount in time (seconds or milliseconds)
+ * 
+ * transition: property name duration timing-function delay
+ * property name & duration -> are required in transition shorthand
+ */
+
+.together {
+    width: 200px;
+    height: 35px;
+    background-color: red;
+    /* shorthand transition */
+    transition: transform 1.25s cubic-bezier(1, 0.29, 0, 1.4) 0.5s;
+    /* multiple transitions */
+    transition: width 0.5s, transform 1.25s, background-color 1s ease-in-out 2s;
+}
+
+.together-container:hover .together {
+    transform: translateX(500px);
+    width: 500px;
+    background-color: green;
+}
