@@ -1,0 +1,170 @@
+/**
+ * display -> is non-transitionable
+ */
+
+body {
+    background-color: #ecf0f1;
+    font-family: Raleway;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.page-title {
+    margin-top: 30px;
+}
+/* 39 */
+.button {
+    border: 0;
+    background-color: #d2d2d2;
+    font-size: 24px;
+    padding: 20px;
+    margin: 20px;
+    outline: none;
+    cursor: pointer;
+    transition: transform 0.25s ease-in-out;
+}
+
+.button.grow:hover {
+    transform: scale(1.2);
+}
+
+.button.shrink:hover {
+    transform: scale(0.8);
+}
+
+/* 40 */
+.button-fill {
+    border: 0;
+    background-color: #d2d2d2;
+    font-size: 24px;
+    padding: 20px;
+    margin: 20px;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.button-fill.left {
+    overflow: hidden;
+}
+
+.button-fill.left::before {
+    content: '';
+    position: absolute;
+    background-color: rgb(159, 184, 113);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    transition: 0.35s left;
+    z-index: 1;
+}
+
+.button-fill.left:hover::before {
+    left: 0;
+}
+
+.button-fill.left span {
+    position: relative;
+    z-index: 2;
+    transition: 0.35s color;
+}
+
+.button-fill.left:hover span {
+    color: aliceblue;
+}
+
+/* :right */
+.button-fill.right {
+    overflow: hidden;
+}
+
+.button-fill.right::before {
+    content: '';
+    position: absolute;
+    background-color: rgb(159, 184, 113);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: -100%;
+    transition: 0.35s right;
+    z-index: 1;
+}
+
+.button-fill.right:hover::before {
+    right: 0;
+}
+
+.button-fill.right span {
+    position: relative;
+    z-index: 2;
+    transition: 0.35s color;
+}
+
+.button-fill.right:hover span {
+    color: aliceblue;
+}
+
+/* 41 */
+.button-fill.bottom {
+    overflow: hidden;
+}
+
+.button-fill.bottom::before {
+    content: '';
+    position: absolute;
+    background-color: rgb(159, 184, 113);
+    width: 100%;
+    height: 100%;
+    /* top: 100%; */
+    bottom: -100%;
+    left: 0;
+    transition: 0.35s bottom;
+    z-index: 1;
+}
+
+.button-fill.bottom:hover::before {
+    bottom: 0;
+}
+
+.button-fill.bottom span {
+    position: relative;
+    z-index: 2;
+    transition: 0.35s color;
+}
+
+.button-fill.bottom:hover span {
+    color: aliceblue;
+}
+
+.button-fill.top {
+    overflow: hidden;
+}
+
+.button-fill.top::before {
+    content: '';
+    position: absolute;
+    background-color: rgb(159, 184, 113);
+    width: 100%;
+    height: 100%;
+    /* top: 100%; */
+    top: -100%;
+    left: 0;
+    transition: 0.35s top;
+    z-index: 1;
+}
+
+.button-fill.top:hover::before {
+    top: 0;
+}
+
+.button-fill.top span {
+    position: relative;
+    z-index: 2;
+    transition: 0.35s color;
+}
+
+.button-fill.top:hover span {
+    color: aliceblue;
+}
