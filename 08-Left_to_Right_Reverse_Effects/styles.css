@@ -3,7 +3,7 @@
  */
 
 body {
-    background-color: darkslategrey;
+    background-color: cornflowerblue;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -12,63 +12,57 @@ body {
 
 .first {
     width: 50%;
-    background-color: aquamarine;
-    padding: 20px;
-    margin: 20px;
+    background-color: darkmagenta;
+    padding: 50px;
+    margin: 50px;
     text-decoration: none;
     align-items: center;
 }
 
 .second {
     width: 50%;
-    background-color: burlywood;
-    padding: 20px;
-    margin: 20px;
+    background-color: royalblue;
+    padding: 50px;
+    margin: 50px;
 }
 
 .link {
     display: inline-block;
     position: relative;
-    font-size: 48px;
+    font-size: 60px;
+    margin: 0 200px;
     color: #fff;
     text-decoration: none;
 }
 
 .first .link::after {
     content: '';
-    display: block;
     position: absolute;
     bottom: 0;
-    right: 0;
     left: 0;
-    width: 100%;
-    height: 0;
-    background-color: #efc323;
+    width: 0;
+    height: 5px;
+    background-color: #d0e047;
     border-radius: 3px;
-    opacity: 0;
-    transition: height 0.15s ease-in-out, opacity 0.15s ease-in-out;
+    transition: width 0.15s ease-in;
 }
 
 .first .link:hover:after {
-    height: 5px;
-    opacity: 1;
+    width: 100%;
 }
 
 .second .link::after {
     content: '';
-    display: block;
     position: absolute;
     bottom: 0;
     right: 0;
-    left: 0;
-    width: 100%;
+    width: 0;
     height: 5px;
-    background-color: #efc323;
+    background-color: #d0e047;
     border-radius: 3px;
-    transform: scaleY(0);
-    transition: scaleY 0.15s ease-in;
+    transition: width 0.15s ease-in;
 }
 
 .second .link:hover:after {
-    transform: scaleY(1);
+    width: 100%;
 }
